@@ -3,7 +3,7 @@
 #  - TODO: Powerline for tmux
 
 casks=(adium cocoa-rest-client daisy-disk diffmerge dropbox fluid google-chrome handbrake i-explorer iphone-configuration-utility phone-clean sequel-pro sourcetree spotify steam textmate transmission unrarx virtualbox vlc)
-brews=(cloc git ios-sim npm tmux tree wget)
+brews=(cloc git ios-sim npm python tmux tree wget)
 rgems=(compass nomad-cli pygmentize)
 nodes=(cordova)
 
@@ -220,8 +220,6 @@ mkdir -p ~/Code/WorkProjects
 echo -e '\n\nCloning terminal utilities'
 pushd ~/Code/TerminalUtils
 git clone https://github.com/robbyrussell/oh-my-zsh.git
-git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
-git clone https://github.com/Lokaltog/powerline.git
 git clone https://github.com/Lokaltog/powerline-fonts.git
 git clone https://github.com/altercation/solarized.git
 popd
@@ -232,11 +230,19 @@ read -p 'Press any key when ready' -n 1 -s
 echo ''
 
 
+# We need to modify the path to point to brew first - this is in dotfiles but they won't have been loaded yet
+#TODO: Will this pick up the correct python path without restarting terminal?
+PATH="/usr/local/bin:$PATH"
+
+
 # Set up command line tools
-echo -e '\nSetting up Powerline'
-echo -e 'Remember to set Terminal/iTerm font to Source Code Pro'
-ln -f ~/Code/TerminalUtils/oh-my-zsh-powerline-theme/powerline.zsh-theme ~/Code/TerminalUtils/oh-my-zsh/themes/
+echo -e '\nSetting up Powerline\n'
+pip install git+git://github.com/Lokaltog/powerline
 cp ~/Code/TerminalUtils/powerline-fonts/SourceCodePro/*.otf ~/Library/Fonts
+echo -e '\nRemember to set Terminal/iTerm font to Source Code Pro'
+
+echo -e '\nInstalling vim supporting Python'
+brew install vim --env-std --override-system-vim --enable-pythoninterp
 
 echo -e '\nSetting ZSH as default shell'
 chsh -s `which zsh`

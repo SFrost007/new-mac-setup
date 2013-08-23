@@ -23,12 +23,13 @@ Command Line Utilities
 * [cloc](http://cloc.sourceforge.net/) - Count Lines of Code
 * [compass](http://compass-style.org/) - CSS Preprocessor
 * [cordova](http://cordova.apache.org/) - Mobile application platform
-* [git](http://git-scm.com/) - Source control (more recent version than Xcode)
+* [git](http://git-scm.com/) - Source control (more recent version than Xcode supplies)
 * [ios-sim](https://github.com/phonegap/ios-sim) - Launch iOS Simulator from Terminal
 * [nomad-cli](http://nomad-cli.com/) - iOS build/distribution helper
 * [pygmentize](http://pygments.org/docs/cmdline/) - Syntax highlighter
 * [tmux](http://tmux.sourceforge.net/) - Terminal Multiplexer
 * [tree](http://mama.indstate.edu/users/ice/tree/) - Directory lister
+* [vim](http://www.vim.org/) - Text editor (more recent version, and with Python support)
 * [wget](http://www.gnu.org/software/wget/) - HTTP client
 
 
@@ -71,9 +72,8 @@ Command Line Environment
 ========================
 * Clones:
 	* [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh)
-	* [Oh-My-ZSH Powerline](https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme)
-	* [Powerline](https://github.com/Lokaltog/powerline)
 	* [Powerline modified fonts](https://github.com/Lokaltog/powerline-fonts)
 	* [Solarized editor themes](http://ethanschoonover.com/solarized)
+* Installs Powerline to brew-installed Python
 * Installs OMZ Powerline theme
 * Sets ZSH as default shell
