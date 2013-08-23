@@ -53,6 +53,7 @@ GUI Software
 * [TextMate 2](http://macromates.com/) - Text editor
 * [Transmission](http://www.transmissionbt.com/) - Bittorrent client
 * [UnrarX](http://www.unrarx.com/) - Archive utility
+* [VirtualBox](https://www.virtualbox.org/) - Virtualisation
 * [VLC](http://www.videolan.org/vlc/index.html) - Media player
 
 
