@@ -14,8 +14,6 @@
 * Xcode
 * Forklift
 * Hyperdock
-* Growl
-* Alfred - Should move to v2 outside AppStore?
 
 ##Manual installs
 * Install Xcode command line tools
