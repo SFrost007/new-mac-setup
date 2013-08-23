@@ -3,7 +3,7 @@
 #  - TODO: Powerline for tmux
 
 casks=(adium cocoa-rest-client daisy-disk diffmerge dropbox fluid google-chrome handbrake i-explorer iphone-configuration-utility phone-clean sequel-pro sourcetree spotify steam textmate transmission unrarx vlc)
-brews=(cloc ios-sim npm tmux tree wget)
+brews=(cloc git ios-sim npm tmux tree wget)
 rgems=(compass nomad-cli pygmentize)
 nodes=(cordova)
 
