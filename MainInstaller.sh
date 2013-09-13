@@ -238,6 +238,7 @@ PATH="/usr/local/bin:$PATH"
 # Set up command line tools
 echo -e '\nSetting up Powerline\n'
 pip install git+git://github.com/Lokaltog/powerline
+pip install psutil
 cp ~/Code/TerminalUtils/powerline-fonts/SourceCodePro/*.otf ~/Library/Fonts
 echo -e '\nRemember to set Terminal/iTerm font to Source Code Pro'
 
