@@ -37,6 +37,7 @@ GUI Software
 ============
 * [Adium](https://adium.im/) - Chat client
 * [Cocoa Rest Client](https://code.google.com/p/cocoa-rest-client/) - For testing REST endpoints
+* [Colors](http://mattpatenaude.com/) - Global colour picker
 * [Daisy Disk](http://www.daisydiskapp.com/) - Disk space visualiser
 * [DiffMerge](http://www.sourcegear.com/diffmerge/) - Diff viewer
 * [Dropbox](https://www.dropbox.com/) - File synchronisation
