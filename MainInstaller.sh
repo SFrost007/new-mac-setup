@@ -64,7 +64,7 @@ sh $DIR/OSX_Config.sh
 
 
 # Set up Homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew doctor
 
 
