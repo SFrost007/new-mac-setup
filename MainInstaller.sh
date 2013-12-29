@@ -84,17 +84,26 @@ done
 brew tap phinze/homebrew-cask
 brew install brew-cask
 echo ''
-if [ `brew cask alfred status` ]; then
-	brew cask alfred link
-else
-	echo -e "If integration is required, add /opt/homebrew-cask/Caskroom to Alfred's search paths\n"
-	read -p 'Press any key to continue' -n 1 -s
-	echo ''
-fi
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 for i in "${casks[@]}"; do :
 	brew cask install $i 2> /dev/null
 	echo ''
+done
+
+# Link casks directory to Alfred
+for i in "${casks[@]}"; do :
+	if [[ "$i" == "alfred2" ]]; then
+		if [[ `brew cask alfred status` ]]; then
+			echo -e '\nLaunch Alfred to initialise preferences before continuing.\n\n'
+			read -p 'Press any key to continue' -n 1 -s
+			echo ''
+			brew cask alfred link
+		else
+			echo -e "If integration is required, add /opt/homebrew-cask/Caskroom to Alfred's search paths\n"
+			read -p 'Press any key to continue' -n 1 -s
+			echo ''
+		fi
+	fi
 done
 
 
