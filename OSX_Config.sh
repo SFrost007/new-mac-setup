@@ -53,6 +53,9 @@ sudo defaults write /System/Library/LaunchDaemons/org.apache.httpd Disabled -boo
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Hide user-specific Applications folder
+if [ ! -d "~/Applications" ]; then
+	mkdir ~/Applications
+fi
 chflags hidden ~/Applications
 
 
