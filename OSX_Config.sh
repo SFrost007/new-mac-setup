@@ -21,7 +21,7 @@
 echo 'Setting general system options, will require root..'
 
 # Disables GateKeeper (app signing checks)
-sudo spctl --master-disable
+spctl --master-disable
 
 # Allow computer name to be set if required
 read -p 'Change computer name? ' -n 1 -r
@@ -30,10 +30,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	read -p 'Enter new computer name: ' -r
 	if [[ $REPLY =~ ^[a-zA-Z0-9\_\-]+$ ]]; then
 		echo 'Changing computer name to' $REPLY
-		sudo scutil --set ComputerName $REPLY
-		sudo scutil --set HostName $REPLY
-		sudo scutil --set LocalHostName $REPLY
-		sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $REPLY
+		scutil --set ComputerName $REPLY
+		scutil --set HostName $REPLY
+		scutil --set LocalHostName $REPLY
+		defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $REPLY
 	else
 		echo 'Invalid computer name entered, skipping'
 	fi
@@ -47,10 +47,10 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Enable built-in Apache to start at boot
-sudo defaults write /System/Library/LaunchDaemons/org.apache.httpd Disabled -bool false
+defaults write /System/Library/LaunchDaemons/org.apache.httpd Disabled -bool false
 
 # Show system info on login screen (when clicking clock)
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Hide user-specific Applications folder
 if [ ! -d "~/Applications" ]; then
@@ -67,12 +67,12 @@ chflags hidden ~/Applications
 echo 'Setting power options..'
 
 # Battery
-sudo pmset -b sleep 30
-sudo pmset -b displaysleep 10
+pmset -b sleep 30
+pmset -b displaysleep 10
 
 # AC Power
-sudo pmset -c sleep 0
-sudo pmset -c displaysleep 60
+pmset -c sleep 0
+pmset -c displaysleep 60
 
 # Screensaver password requirement
 defaults write com.apple.screensaver 'askForPassword' -int 1
@@ -142,8 +142,8 @@ defaults -currentHost write NSGlobalDomain com.apple.keyboard.modifiermapping.11
 )'
 
 # Enable input menu on login screen
-sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool "TRUE"
-sudo defaults write /var/ard/Library/Preferences/com.apple.menuextra.textinput ModeNameVisible -bool "TRUE"
+defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool "TRUE"
+defaults write /var/ard/Library/Preferences/com.apple.menuextra.textinput ModeNameVisible -bool "TRUE"
 
 # Keyboard: Enable British-PC layout
 # To modify for other layouts, manually enable the layout and check for the name/ID in
