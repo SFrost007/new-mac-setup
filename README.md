@@ -39,7 +39,6 @@ GUI Software
 * [Cocoa Rest Client](https://code.google.com/p/cocoa-rest-client/) - For testing REST endpoints
 * [Colors](http://mattpatenaude.com/) - Global colour picker
 * [Daisy Disk](http://www.daisydiskapp.com/) - Disk space visualiser
-* [DiffMerge](http://www.sourcegear.com/diffmerge/) - Diff viewer
 * [Dropbox](https://www.dropbox.com/) - File synchronisation
 * [Fluid](http://fluidapp.com/) - Web app wrapper generator
 * [Google Chrome](https://www.google.com/chrome) - Web browser
