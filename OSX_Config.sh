@@ -242,8 +242,8 @@ chflags nohidden ~/Library
 ###############################################################################
 echo 'Setting Dock preferences..'
 
-# Move the dock to the left
-defaults write com.apple.dock orientation -string "left"
+# Move the dock to the right
+defaults write com.apple.dock orientation -string "right"
 
 # Make the dock icons a bit smaller
 defaults write com.apple.dock tilesize -int 36
