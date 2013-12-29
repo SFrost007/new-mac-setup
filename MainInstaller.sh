@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#  - TODO: Powerline for tmux
-
 casks=(adium alfred cocoa-rest-client colors daisy-disk dropbox fluid google-chrome handbrake i-explorer iphone-configuration-utility phone-clean sequel-pro sourcetree spotify steam textmate transmission unrarx virtualbox vlc)
 brews=(cloc git ios-sim npm python tmux tree wget)
 rgems=(compass nomad-cli pygmentize)
@@ -240,7 +238,6 @@ echo ''
 
 
 # We need to modify the path to point to brew first - this is in dotfiles but they won't have been loaded yet
-#TODO: Will this pick up the correct python path without restarting terminal?
 PATH="/usr/local/bin:$PATH"
 
 
