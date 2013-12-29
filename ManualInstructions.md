@@ -15,9 +15,6 @@
 * Forklift
 * Hyperdock
 
-##Manual installs
-* Install Xcode command line tools
-
 ##TODO:
 * Fetch Developer Certs
 * Textmate: Add HTML snippet and bin link
