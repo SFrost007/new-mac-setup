@@ -310,7 +310,7 @@ echo -e '\nSetting up Powerline\n'
 pip install git+git://github.com/Lokaltog/powerline
 pip install psutil
 cp ~/Code/TerminalUtils/powerline-fonts/SourceCodePro/*.otf ~/Library/Fonts
-echo -e '\nRemember to set Terminal/iTerm font to Source Code Pro'
+echo -e '\n*** Remember to set Terminal/iTerm font to Source Code Pro ***'
 
 echo -e '\nInstalling vim supporting Python'
 brew install vim --env-std --override-system-vim --enable-pythoninterp
