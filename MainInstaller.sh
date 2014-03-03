@@ -155,7 +155,7 @@ done
 
 # Install RVM, create a default gemset and install the listed gems
 echo ''
-read -p 'Install RVM and gems? ' -n 1 -r
+read -p 'Install RVM? ' -n 1 -r
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	# export rvm_ignore_dotfiles=yes
@@ -164,11 +164,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	rvm --create 1.9.3@default-gemset
 	rvm use 1.9.3@default-gemset --default
 
-	for i in "${rgems[@]}"; do :
-		gem install $i
-		echo ''
-	done
 fi
+for i in "${rgems[@]}"; do :
+	sudo gem install $i
+	echo ''
+done
 
 
 
