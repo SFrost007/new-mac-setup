@@ -187,14 +187,19 @@ fi
 
 
 # Install MySql from Brew and setup to run correctly
-brew install mysql
-# Setup daemon
-mkdir -p ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents/
-launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
-# Start MySql server and run secure script
-mysql.server start
-mysql_secure_installation
+echo ''
+read -p 'Install and configure MySQL? ' -n 1 -r
+echo ''
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	brew install mysql
+	# Setup daemon
+	mkdir -p ~/Library/LaunchAgents
+	ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents/
+	launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+	# Start MySql server and run secure script
+	mysql.server start
+	mysql_secure_installation
+fi
 
 
 
