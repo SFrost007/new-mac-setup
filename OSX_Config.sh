@@ -356,7 +356,7 @@ defaults write org.m0k.transmission WarningLegal -bool false
 ###############################################################################
 KILL_LIST=(Dashboard Dock Finder SystemUIServer)
 for i in "${KILL_LIST[@]}"; do :
-	killall $i
+	killall $i &> /dev/null
 done
 echo ''
 echo ''
