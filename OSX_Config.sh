@@ -151,21 +151,28 @@ defaults write /var/ard/Library/Preferences/com.apple.menuextra.textinput ModeNa
 # NOTE: This will only work if there is only one current keyboard layout ('1' in each command is array index)
 KB_LAYOUT_NAME="British-PC"
 KB_LAYOUT_ID=250
-KB_LAYOUT_FILES=$(ls ~/Library/Preferences/ByHost/com.apple.HIToolbox.*.plist)
-for i in "${KB_LAYOUT_FILES[@]}"; do :
-	/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:1:InputSourceKind string Keyboard\ Layout" $i
-	/usr/libexec/PlistBuddy -c "Set :AppleEnabledInputSources:1:InputSourceKind Keyboard\ Layout" $i
-	/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:1:KeyboardLayout\ ID integer ${KB_LAYOUT_ID}" $i
-	/usr/libexec/PlistBuddy -c "Set :AppleEnabledInputSources:1:KeyboardLayout\ ID ${KB_LAYOUT_ID}" $i
-	/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:1:KeyboardLayout\ Name string ${KB_LAYOUT_NAME}" $i
-	/usr/libexec/PlistBuddy -c "Set :AppleEnabledInputSources:1:KeyboardLayout\ Name ${KB_LAYOUT_NAME}" $i
-	/usr/libexec/PlistBuddy -c "Add :AppleSelectedInputSources:1:InputSourceKind string Keyboard\ Layout" $i
-	/usr/libexec/PlistBuddy -c "Set :AppleSelectedInputSources:1:InputSourceKind Keyboard\ Layout" $i
-	/usr/libexec/PlistBuddy -c "Add :AppleSelectedInputSources:1:KeyboardLayout\ ID integer ${KB_LAYOUT_ID}" $i
-	/usr/libexec/PlistBuddy -c "Set :AppleSelectedInputSources:1:KeyboardLayout\ ID ${KB_LAYOUT_ID}" $i
-	/usr/libexec/PlistBuddy -c "Add :AppleSelectedInputSources:1:KeyboardLayout\ Name string ${KB_LAYOUT_NAME}" $i
-	/usr/libexec/PlistBuddy -c "Set :AppleSelectedInputSources:1:KeyboardLayout\ Name ${KB_LAYOUT_NAME}" $i
-done
+KB_LAYOUT_FILES=$(ls ~/Library/Preferences/ByHost/com.apple.HIToolbox.*.plist 2&> /dev/null)
+if [[ -n "$KB_LAYOUT_FILES" ]]; then
+	for i in "${KB_LAYOUT_FILES[@]}"; do :
+		if [[ -f $i ]]; then
+			/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:1:InputSourceKind string Keyboard\ Layout" $i
+			/usr/libexec/PlistBuddy -c "Set :AppleEnabledInputSources:1:InputSourceKind Keyboard\ Layout" $i
+			/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:1:KeyboardLayout\ ID integer ${KB_LAYOUT_ID}" $i
+			/usr/libexec/PlistBuddy -c "Set :AppleEnabledInputSources:1:KeyboardLayout\ ID ${KB_LAYOUT_ID}" $i
+			/usr/libexec/PlistBuddy -c "Add :AppleEnabledInputSources:1:KeyboardLayout\ Name string ${KB_LAYOUT_NAME}" $i
+			/usr/libexec/PlistBuddy -c "Set :AppleEnabledInputSources:1:KeyboardLayout\ Name ${KB_LAYOUT_NAME}" $i
+			/usr/libexec/PlistBuddy -c "Add :AppleSelectedInputSources:1:InputSourceKind string Keyboard\ Layout" $i
+			/usr/libexec/PlistBuddy -c "Set :AppleSelectedInputSources:1:InputSourceKind Keyboard\ Layout" $i
+			/usr/libexec/PlistBuddy -c "Add :AppleSelectedInputSources:1:KeyboardLayout\ ID integer ${KB_LAYOUT_ID}" $i
+			/usr/libexec/PlistBuddy -c "Set :AppleSelectedInputSources:1:KeyboardLayout\ ID ${KB_LAYOUT_ID}" $i
+			/usr/libexec/PlistBuddy -c "Add :AppleSelectedInputSources:1:KeyboardLayout\ Name string ${KB_LAYOUT_NAME}" $i
+			/usr/libexec/PlistBuddy -c "Set :AppleSelectedInputSources:1:KeyboardLayout\ Name ${KB_LAYOUT_NAME}" $i
+		fi
+	done
+else
+	echo '  ERROR: Could not set keyboard layouts'
+fi
+
 
 # Keyboard: Enable the input language switcher
 # FIXME: This will add a duplicate if the icon already exists
