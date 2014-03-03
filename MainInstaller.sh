@@ -294,6 +294,17 @@ echo ''
 PATH="/usr/local/bin:$PATH"
 
 
+# Generate new SSH key
+echo ''
+read -p 'Generate new SSH keypair? ' -n 1 -r
+echo ''
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	ssh-keygen -t rsa
+	pbcopy < ~/.ssh/id_rsa.pub
+	echo -e '\nPublic key copied to clipboard\n'
+fi
+
+
 # Set up command line tools
 echo -e '\nSetting up Powerline\n'
 pip install git+git://github.com/Lokaltog/powerline
@@ -308,14 +319,3 @@ echo -e '\nSetting ZSH as default shell'
 chsh -s `which zsh`
 /usr/bin/env zsh
 source ~/.zshrc
-
-
-# Generate new SSH key
-echo ''
-read -p 'Generate new SSH keypair? ' -n 1 -r
-echo ''
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-	ssh-keygen -t rsa
-	pbcopy < ~/.ssh/id_rsa.pub
-	echo -e '\nPublic key copied to clipboard\n'
-fi
