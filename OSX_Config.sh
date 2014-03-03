@@ -175,8 +175,10 @@ fi
 
 
 # Keyboard: Enable the input language switcher
-# FIXME: This will add a duplicate if the icon already exists
-defaults write com.apple.systemuiserver 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/TextInput.menu'
+CURRENT_TEXTINPUT_STATUS=$(defaults read com.apple.systemuiserver 'menuExtras' | grep TextInput.menu)
+if [[ -z "$CURRENT_TEXTINPUT_STATUS" ]]; then
+	defaults write com.apple.systemuiserver 'menuExtras' -array-add '/System/Library/CoreServices/Menu Extras/TextInput.menu'
+fi
 
 
 
