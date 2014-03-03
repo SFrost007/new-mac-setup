@@ -1,9 +1,48 @@
 #!/bin/bash
 
-casks=(adium alfred cocoa-rest-client colors daisy-disk dropbox fluid google-chrome handbrake i-explorer iphone-configuration-utility phone-clean sequel-pro sourcetree spotify steam textmate transmission unrarx virtualbox vlc)
-brews=(cloc git ios-sim npm python tmux tree wget)
-rgems=(compass nomad-cli pygmentize)
-nodes=(cordova)
+casks=(
+	adium
+	alfred
+	cocoa-rest-client
+	colors
+	daisy-disk
+	dropbox
+	fluid
+	google-chrome
+	handbrake
+	i-explorer
+	iphone-configuration-utility
+	phone-clean
+	sequel-pro
+	sourcetree
+	spotify
+	steam
+	textmate
+	transmission
+	truecrypt
+	unrarx
+	virtualbox
+	vlc
+)
+brews=(
+	cloc
+	git
+	ios-sim
+	npm
+	python
+	tmux
+	tree
+	wget
+)
+rgems=(
+	cocoapods
+	compass
+	nomad-cli
+	pygmentize
+)
+nodes=(
+	cordova
+)
 
 echo ''
 echo ' ***** New machine setup script ***** '
