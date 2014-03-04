@@ -13,6 +13,8 @@ casks=(
 	i-explorer
 	iphone-configuration-utility
 	phone-clean
+	qlmarkdown
+	qlstephen
 	sequel-pro
 	sourcetree
 	spotify
@@ -135,6 +137,9 @@ for i in "${casks[@]}"; do :
 	brew cask install $i 2> /dev/null
 	echo ''
 done
+# Restart the QuickLook manager to pick up new plugins
+qlmanage -r
+
 
 # Link casks directory to Alfred
 for i in "${casks[@]}"; do :
@@ -232,34 +237,6 @@ else
 fi
 
 
-
-# Install QuickLook plugins for non-extensioned files (README) and Markdown
-# Xcode now supplies a syntax-highlighted code viewer plugin.
-echo -e '\n\nInstalling extra QuickLook plugins...\n'
-mkdir -p ~/Library/QuickLook
-wget https://github.com/downloads/whomwah/qlstephen/QLStephen.qlgenerator.zip
-if [ -f QLStephen.qlgenerator.zip ]; then
-	unzip -q QLStephen.qlgenerator.zip && rm QLStephen.qlgenerator.zip
-	mv QLStephen.qlgenerator ~/Library/QuickLook
-	echo -e '\nInstalled plugin for plain text files (README etc)\n'
-else
-	echo -e '\n ***** Failed to download QuickLook plugin for plain text files ***** \n'
-	read -p 'Press any key to continue' -n 1 -s
-	echo ''
-fi
-wget https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip
-if [ -f QLMarkdown-1.3.zip ]; then
-	unzip -q QLMarkdown-1.3.zip && rm QLMarkdown-1.3.zip
-	mv QLMarkdown/QLMarkdown.qlgenerator ~/Library/QuickLook
-	rm -rf QLMarkdown
-	echo -e '\nInstalled plugin for Markdown files\n'
-else
-	echo -e '\n ***** Failed to download QuickLook plugin for Markdown files ***** \n'
-	read -p 'Press any key to continue' -n 1 -s
-	echo ''
-fi
-rm -rf __MACOSX
-qlmanage -r
 
 
 
