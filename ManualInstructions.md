@@ -8,12 +8,13 @@
 * Update Office
 
 ##Sign into AppStore and install:
-* Pixelmator
-* Tweetbot
+* DaisyDisk
 * Fantastical
-* Xcode
 * Forklift
 * Hyperdock
+* Pixelmator
+* Tweetbot
+* Xcode
 
 ##TODO:
 * Fetch Developer Certs
@@ -21,3 +22,4 @@
 * Set Alfred shortcut, conflicts with Spotlight
 * Set Alfred, Hyperdock, Fantastical, iTerm options/startup
 * Configure Finder sidebar items
+* Install BeyondCompare beta

@@ -3,9 +3,9 @@
 casks=(
 	adium
 	alfred
+	brackets
 	cocoa-rest-client
 	colors
-	daisy-disk
 	dropbox
 	fluid
 	google-chrome
@@ -17,6 +17,7 @@ casks=(
 	sourcetree
 	spotify
 	steam
+	sublime-text
 	textmate
 	transmission
 	truecrypt

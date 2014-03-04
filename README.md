@@ -16,6 +16,7 @@ Package Managers
 * [Homebrew Cask](https://github.com/phinze/homebrew-cask) - For GUI applications
 * [NPM](https://npmjs.org/)
 * [RVM](https://rvm.io/) - (Optional)
+* [CocoaPods](http://cocoapods.org/) - Objective C dependency manager
 
 
 Command Line Utilities
@@ -36,9 +37,10 @@ Command Line Utilities
 GUI Software
 ============
 * [Adium](https://adium.im/) - Chat client
+* [Alfred](http://www.alfredapp.com/) - Productivity app/launcher
+* [Brackets](http://brackets.io/) - Source code editor
 * [Cocoa Rest Client](https://code.google.com/p/cocoa-rest-client/) - For testing REST endpoints
 * [Colors](http://mattpatenaude.com/) - Global colour picker
-* [Daisy Disk](http://www.daisydiskapp.com/) - Disk space visualiser
 * [Dropbox](https://www.dropbox.com/) - File synchronisation
 * [Fluid](http://fluidapp.com/) - Web app wrapper generator
 * [Google Chrome](https://www.google.com/chrome) - Web browser
@@ -51,8 +53,10 @@ GUI Software
 * [SourceTree](http://www.sourcetreeapp.com/) - Git & Mercurial client
 * [Spotify](https://www.spotify.com) - Streaming music client
 * [Steam](http://store.steampowered.com/) - Gaming platform
+* [Sublime Text](http://www.sublimetext.com/) - Text editor
 * [TextMate 2](http://macromates.com/) - Text editor
 * [Transmission](http://www.transmissionbt.com/) - Bittorrent client
+* [Truecrypt](http://www.truecrypt.org/) - Disk encryption
 * [UnrarX](http://www.unrarx.com/) - Archive utility
 * [VirtualBox](https://www.virtualbox.org/) - Virtualisation
 * [VLC](http://www.videolan.org/vlc/index.html) - Media player
