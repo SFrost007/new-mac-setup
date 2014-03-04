@@ -4,15 +4,15 @@ casks=(
 	adium
 	alfred
 	brackets
-	cocoa-rest-client
+	cocoarestclient
 	colors
 	dropbox
 	fluid
 	google-chrome
 	handbrake
-	i-explorer
+	iexplorer
 	iphone-configuration-utility
-	phone-clean
+	phoneclean
 	qlmarkdown
 	qlstephen
 	sequel-pro
