@@ -48,7 +48,9 @@ GUI Software
 * [iExplorer](http://www.macroplant.com/iexplorer/) - iOS device manager
 * [iTerm 2](http://www.iterm2.com/) - Terminal emulator
 * [iPhone Configuration Utility](http://support.apple.com/kb/DL1465) - iOS installation manager
+* [Mou](http://mouapp.com/) - Markdown editor
 * [Phone Clean](http://www.imobie.com/phoneclean/) - iOS space reclaimer
+* [Reveal](http://revealapp.com/) - iOS app inspector
 * [Sequel Pro](http://www.sequelpro.com/) - MySQL manager
 * [SourceTree](http://www.sourcetreeapp.com/) - Git & Mercurial client
 * [Spotify](https://www.spotify.com) - Streaming music client

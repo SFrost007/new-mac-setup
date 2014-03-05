@@ -12,9 +12,11 @@ casks=(
 	handbrake
 	iexplorer
 	iphone-configuration-utility
+	mou
 	phoneclean
 	qlmarkdown
 	qlstephen
+	reveal
 	sequel-pro
 	sourcetree
 	spotify
