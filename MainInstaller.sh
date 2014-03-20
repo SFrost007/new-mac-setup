@@ -13,7 +13,6 @@ casks=(
 	iexplorer
 	iphone-configuration-utility
 	mou
-	phoneclean
 	qlmarkdown
 	qlstephen
 	reveal

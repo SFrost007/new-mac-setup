@@ -23,3 +23,4 @@
 * Set Alfred, Hyperdock, Fantastical, iTerm options/startup
 * Configure Finder sidebar items
 * Install BeyondCompare beta
+* Get Thanksgiving version of PhoneClean: http://www.imobie.com/product/phoneclean-thanksgiving-mac.dmg
