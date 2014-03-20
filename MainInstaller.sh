@@ -46,6 +46,7 @@ rgems=(
 )
 nodes=(
 	cordova
+	jslint
 )
 
 echo ''
