@@ -255,6 +255,10 @@ mkdir -p ~/Code/TestProjects
 mkdir -p ~/Code/WorkProjects
 
 
+# Clones common projects/libraries
+sh $DIR/CodeClones.sh
+
+
 
 # Clone command line tools
 echo -e '\n\nCloning terminal utilities'
