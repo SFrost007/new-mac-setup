@@ -211,6 +211,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	# Start MySql server and run secure script
 	mysql.server start
 	mysql_secure_installation
+	echo ''
+	echo 'If mysql_secure_installation failed to run, execute it manually now'
+	echo ''
+	read -p 'Press any key to continue..' -n 1 -r
 fi
 
 
