@@ -41,8 +41,10 @@ GUI Software
 * [Alfred](http://www.alfredapp.com/) - Productivity app/launcher
 * [Brackets](http://brackets.io/) - Source code editor
 * [Cocoa Rest Client](https://code.google.com/p/cocoa-rest-client/) - For testing REST endpoints
+* [Colloquy](http://colloquy.info/) - IRC client
 * [Colors](http://mattpatenaude.com/) - Global colour picker
 * [Dropbox](https://www.dropbox.com/) - File synchronisation
+* [Firefox](http://www.mozilla.org/en-GB/firefox/new/) - Web browser
 * [Fluid](http://fluidapp.com/) - Web app wrapper generator
 * [Google Chrome](https://www.google.com/chrome) - Web browser
 * [Handbrake](http://handbrake.fr/) - Video transcoder
@@ -52,6 +54,7 @@ GUI Software
 * [Mou](http://mouapp.com/) - Markdown editor
 * [Reveal](http://revealapp.com/) - iOS app inspector
 * [Sequel Pro](http://www.sequelpro.com/) - MySQL manager
+* [Skype](http://www.skype.com/) - Communications client
 * [SourceTree](http://www.sourcetreeapp.com/) - Git & Mercurial client
 * [Spotify](https://www.spotify.com) - Streaming music client
 * [Steam](http://store.steampowered.com/) - Gaming platform

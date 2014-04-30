@@ -5,8 +5,10 @@ casks=(
 	alfred
 	brackets
 	cocoarestclient
+	colloquy
 	colors
 	dropbox
+	firefox
 	fluid
 	google-chrome
 	handbrake
@@ -17,6 +19,7 @@ casks=(
 	qlstephen
 	reveal
 	sequel-pro
+	skype
 	sourcetree
 	spotify
 	steam
