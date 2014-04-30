@@ -3,7 +3,7 @@ New Mac Setup
 
 These scripts automatically install a significant quantity of day-to-day development tools and commonly used software on a fresh OS X image, in addition to setting almost all built-in OS X options to (my!) desired values.
 
-Error checking is currently minimal, but this has been developed/tested on a clean Mountain Lion (10.8.4) installation. The only pre-requisite is to install Xcode and its associated "Command Line Tools" to allow several of the tools to be built.
+Error checking is currently minimal, but this has been developed/tested on a clean Mountain Lion (10.8.4) installation, and tested on Mavericks (10.9.1). The only pre-requisite is to install Xcode and its associated "Command Line Tools" to allow several of the tools to be built.
 
 Much of the script is non-interactive and non-prompting; for variation you should edit the script(s) after cloning.
 
