@@ -310,3 +310,7 @@ echo -e '\nSetting ZSH as default shell'
 chsh -s `which zsh`
 /usr/bin/env zsh
 source ~/.zshrc
+
+# Fix commands like pbcopy when used in tmux
+brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
+
