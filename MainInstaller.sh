@@ -17,6 +17,13 @@ casks=(
 	mou
 	qlmarkdown
 	qlstephen
+	qlcolorcode
+	quicklook-json
+	qlprettypatch
+	quicklook-csv
+	betterzipql
+	webp-quicklook
+	suspicious-package
 	reveal
 	sequel-pro
 	skype
