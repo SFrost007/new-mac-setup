@@ -108,6 +108,22 @@ if [[ $UID == 0 ]]; then
 	exit 1
 fi
 
+read -p "Have you installed Xcode and/or the command line tools?" -n 1 -r
+echo ''
+echo ''
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+	echo 'A popup will appear asking to install Command Line developer tools. Select Install.'
+	
+	# `gcc` or `make` will prompt OS X to download command line tools
+	gcc
+
+	# probably a more intelligent way of detecting if installed...
+	read -p 'When installed press [ENTER] to continue' -n1 -s
+	echo ''
+	echo ''
+
+fi
+
 read -p 'Are you sure you wish to proceed with this script? ' -n 1 -r
 echo ''
 echo ''
