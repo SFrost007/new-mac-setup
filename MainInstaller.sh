@@ -310,7 +310,7 @@ read -p 'Generate new SSH keypair? ' -n 1 -r
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	ssh-keygen -t rsa
-	ssh-add ~/.ssh/id_rsa.pub
+	ssh-add ~/.ssh/id_rsa
 	pbcopy < ~/.ssh/id_rsa.pub
 	echo -e '\nPublic key copied to clipboard\n'
 fi
