@@ -17,6 +17,13 @@ casks=(
 	mou
 	qlmarkdown
 	qlstephen
+	qlcolorcode
+	quicklook-json
+	qlprettypatch
+	quicklook-csv
+	betterzipql
+	webp-quicklook
+	suspicious-package
 	reveal
 	sequel-pro
 	skype
@@ -99,6 +106,22 @@ if [[ $UID == 0 ]]; then
 	echo 'This script should not be run as sudo. Exiting...'
 	echo ''
 	exit 1
+fi
+
+read -p "Have you installed Xcode and/or the command line tools?" -n 1 -r
+echo ''
+echo ''
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+	echo 'A popup will appear asking to install Command Line developer tools. Select Install.'
+	
+	# `gcc` or `make` will prompt OS X to download command line tools
+	gcc
+
+	# probably a more intelligent way of detecting if installed...
+	read -p 'When installed press [ENTER] to continue' -n1 -s
+	echo ''
+	echo ''
+
 fi
 
 read -p 'Are you sure you wish to proceed with this script? ' -n 1 -r
@@ -246,10 +269,6 @@ else
 fi
 
 
-
-
-
-
 # Create code folder tree
 # TODO: "Projects" should be symlinked here, but we haven't set up Dropbox yet
 echo -e '\n\nSetting up Code folder structure..'
@@ -291,6 +310,7 @@ read -p 'Generate new SSH keypair? ' -n 1 -r
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	ssh-keygen -t rsa
+	ssh-add ~/.ssh/id_rsa
 	pbcopy < ~/.ssh/id_rsa.pub
 	echo -e '\nPublic key copied to clipboard\n'
 fi
@@ -314,3 +334,11 @@ source ~/.zshrc
 # Fix commands like pbcopy when used in tmux
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
+# Add option to install Android SDK
+echo ''
+read -p 'Install Android SDK?' -n 1 -r
+echo ''
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	brew install android-sdk
+	android update sdk --no-ui --filter 'platform-tools'
+fi
