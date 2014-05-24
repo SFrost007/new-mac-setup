@@ -269,10 +269,6 @@ else
 fi
 
 
-
-
-
-
 # Create code folder tree
 # TODO: "Projects" should be symlinked here, but we haven't set up Dropbox yet
 echo -e '\n\nSetting up Code folder structure..'
@@ -338,3 +334,17 @@ source ~/.zshrc
 # Fix commands like pbcopy when used in tmux
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
+# Add option to install Android SDK
+echo ''
+read -p 'Install Android SDK?' -n 1 -r
+echo ''
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip -O androidSDK.zip
+	if [ -f androidSDK.zip ]; then
+		unzip -q androidSDK.zip && rm androidSDK.zip
+		mv android-sdk-macosx ~/Code/SDKs
+		export PATH=~/Code/SDKs/android-sdk-macosx/platform-tools:~/Code/SDKs/android-sdk-macosx/tools:$PATH
+	else
+		echo -e '\n ***** Failed to download Android SDKs, please try again later ***** \n'
+	fi
+fi
