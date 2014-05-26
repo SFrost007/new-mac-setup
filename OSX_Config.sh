@@ -243,6 +243,12 @@ chflags nohidden ~/Library
 # Show all files
 #defaults write com.apple.finder AppleShowAllFiles -bool true
 
+# Disable spotlight. If installing alternatives like Alfred
+read -p 'Disable spotlight search? ' -n 1 -r
+echo ''
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+	sudo mv /System/Library/CoreServices/Search.bundle /System/Library/CoreServices/Search.bundle.bak && killall SystemUIServer
+fi
 
 
 
