@@ -44,6 +44,7 @@ brews=(
 	ios-sim
 	npm
 	python
+	spark
 	tmux
 	tree
 	wget
@@ -51,6 +52,7 @@ brews=(
 rgems=(
 	cocoapods
 	compass
+	lolcat
 	nomad-cli
 	pygmentize
 )
