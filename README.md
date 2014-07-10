@@ -27,9 +27,11 @@ Command Line Utilities
 * [git](http://git-scm.com/) - Source control (more recent version than Xcode supplies)
 * [ios-sim](https://github.com/phonegap/ios-sim) - Launch iOS Simulator from Terminal
 * [jslint](https://github.com/reid/node-jslint) - Javascript code quality tool
+* [lolcat](https://github.com/busyloop/lolcat) - Liven up command output
 * [nd](https://www.npmjs.org/package/nd) - Terminal-based Markdown viewer
 * [nomad-cli](http://nomad-cli.com/) - iOS build/distribution helper
 * [pygmentize](http://pygments.org/docs/cmdline/) - Syntax highlighter
+* [spark](http://zachholman.com/spark/) - Command line graph generator
 * [tmux](http://tmux.sourceforge.net/) - Terminal Multiplexer
 * [tree](http://mama.indstate.edu/users/ice/tree/) - Directory lister
 * [vim](http://www.vim.org/) - Text editor (more recent version, and with Python support)
