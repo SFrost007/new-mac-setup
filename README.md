@@ -74,6 +74,7 @@ OSX Configuration
 * Installation of British-PC keyboard layout
 * QuickLook helpers for Markdown and plain-text with no extension (e.g. README)
 * Apache/PHP/MySQL configuration
+* Downloads Solarized colour scheme for Xcode
 * __MANY__ other small tweaks/settings
 
 

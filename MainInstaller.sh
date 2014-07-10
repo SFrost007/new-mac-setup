@@ -333,6 +333,10 @@ chsh -s `which zsh`
 /usr/bin/env zsh
 source ~/.zshrc
 
+# Download Solarized for Xcode
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+wget "https://raw.githubusercontent.com/ArtSabintsev/Solarized-Dark-for-Xcode/master/Solarized%20Dark%20@ArtSabintsev.dvtcolortheme" -P ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+
 # Fix commands like pbcopy when used in tmux
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 

@@ -24,3 +24,4 @@
 * Configure Finder sidebar items
 * Install BeyondCompare beta
 * Get Thanksgiving version of PhoneClean: http://www.imobie.com/product/phoneclean-thanksgiving-mac.dmg
+* Install https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode
