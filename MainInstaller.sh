@@ -229,6 +229,7 @@ echo ''
 read -p 'Install and configure MySQL? ' -n 1 -r
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+	sudo sed -i '' 's/;extension=php_mysql\./extension=php_mysql\./g' /etc/php.ini
 	brew install mysql
 	# Setup daemon
 	mkdir -p ~/Library/LaunchAgents
@@ -250,7 +251,6 @@ sudo chmod -R o+w /Library/WebServer/Documents
 sudo sed -i '' 's/#LoadModule php5/LoadModule php5/g' /etc/apache2/httpd.conf
 echo "<?php phpinfo(); ?>" | sudo tee /Library/WebServer/Documents/phpinfo.php
 sudo cp /etc/php.ini.default /etc/php.ini
-sudo sed -i '' 's/;extension=php_mysql\./extension=php_mysql\./g' /etc/php.ini
 sudo sed -i '' 's/display_errors = Off/display_errors = On/g' /etc/php.ini
 sudo sed -i '' 's/html_errors = Off/html_errors = On/g' /etc/php.ini
 sudo sed -i '' 's/mysql.default_socket = \/var\/mysql\/mysql.sock/mysql.default_socket = \/tmp\/mysql.sock/g' /etc/php.ini
