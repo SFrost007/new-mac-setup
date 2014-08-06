@@ -14,6 +14,7 @@ casks=(
 	handbrake
 	iexplorer
 	iphone-configuration-utility
+	iterm2-nightly
 	mou
 	qlmarkdown
 	qlstephen
@@ -257,20 +258,6 @@ sudo sed -i '' 's/html_errors = Off/html_errors = On/g' /etc/php.ini
 sudo sed -i '' 's/mysql.default_socket = \/var\/mysql\/mysql.sock/mysql.default_socket = \/tmp\/mysql.sock/g' /etc/php.ini
 sudo apachectl restart
 
-
-
-# Manually install latest iTerm nightly as brew-cask prefers stable
-echo -e '\n\n\nFetching latest iTerm2 nightly release...\n'
-wget http://www.iterm2.com/nightly/latest -O iTerm.zip
-if [ -f iTerm.zip ]; then
-	unzip -q iTerm.zip && rm iTerm.zip
-	mv iTerm.app /Applications
-	echo -e '\nInstalled iTerm 2 to /Applications\n'
-else
-	echo -e '\n ***** Failed to download iTerm nightly, falling back to brew cask ***** \n'
-	brew cask install iterm2 2> /dev/null
-	echo ''
-fi
 
 
 # Create code folder tree
