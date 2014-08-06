@@ -10,6 +10,7 @@ casks=(
 	dropbox
 	firefox
 	fluid
+	font-sauce-code-powerline
 	google-chrome
 	handbrake
 	iexplorer
@@ -281,7 +282,6 @@ sh $DIR/CodeClones.sh
 echo -e '\n\nCloning terminal utilities'
 pushd ~/Code/TerminalUtils
 git clone https://github.com/robbyrussell/oh-my-zsh.git
-git clone https://github.com/Lokaltog/powerline-fonts.git
 git clone https://github.com/altercation/solarized.git
 popd
 
@@ -311,7 +311,6 @@ fi
 echo -e '\nSetting up Powerline\n'
 pip install git+git://github.com/Lokaltog/powerline
 pip install psutil
-cp ~/Code/TerminalUtils/powerline-fonts/SourceCodePro/*.otf ~/Library/Fonts
 echo -e '\n*** Remember to set Terminal/iTerm font to Source Code Pro ***'
 
 echo -e '\nInstalling vim supporting Python'
