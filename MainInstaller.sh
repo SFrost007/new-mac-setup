@@ -1,6 +1,7 @@
 #!/bin/bash
 
 casks=(
+	# Apps
 	adium
 	alfred
 	brackets
@@ -10,22 +11,12 @@ casks=(
 	dropbox
 	firefox
 	fluid
-	font-sauce-code-powerline
 	google-chrome
 	handbrake
 	iexplorer
 	iphone-configuration-utility
 	iterm2-nightly
 	mou
-	qlmarkdown
-	qlstephen
-	qlcolorcode
-	quicklook-json
-	qlprettypatch
-	quicklook-csv
-	betterzipql
-	webp-quicklook
-	suspicious-package
 	reveal
 	sequel-pro
 	skype
@@ -39,6 +30,20 @@ casks=(
 	unrarx
 	virtualbox
 	vlc
+
+	# Fonts
+	font-sauce-code-powerline
+
+	# Quicklook plugins
+	betterzipql
+	qlmarkdown
+	qlstephen
+	qlcolorcode
+	quicklook-json
+	qlprettypatch
+	quicklook-csv
+	suspicious-package
+	webp-quicklook
 )
 brews=(
 	cloc
