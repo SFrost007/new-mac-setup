@@ -145,6 +145,10 @@ sh $DIR/OSX_Config.sh
 # Set up Homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew doctor
+brew tap caskroom/cask
+brew tap caskroom/fonts
+brew tap caskroom/versions
+brew install brew-cask
 
 
 
@@ -158,11 +162,8 @@ done
 
 
 # Use Homebrew to install common GUI applications
-# Full list at https://github.com/phinze/homebrew-cask/tree/master/Casks
+# Full list at https://github.com/caskroom/homebrew-cask/tree/master/Casks
 # Will prompt for sudo for first cask
-brew tap phinze/homebrew-cask
-brew install brew-cask
-echo ''
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 for i in "${casks[@]}"; do :
 	brew cask install $i 2> /dev/null
